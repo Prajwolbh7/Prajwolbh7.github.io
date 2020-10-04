@@ -1,17 +1,19 @@
-*{
-	margin: 0px;
-	padding: 0px;
-	font-family: The Times New Roman;
+@import url('https://fonts.googleapis.com/css2? family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
+
 
 header {
-	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/b2.jpeg);
-	background-repeat: no-repeat;
-    height: 100vh;
-    background-attachment: fixed; 
-    background-size: 100% 100%;
+	
+	height: cover;
+	background-size: cover;
+	background-position: center;
 }
-
 ul{
 	float: right;
 	list-style-type: none;
@@ -23,14 +25,14 @@ ul li{
 
 ul li a{
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	padding: 5px 20px;
 	border: 1px solid #fff;
 	transition: 0.6s ease;
 }
 ul li a:hover{
 	background-color: #fff;
-	color: #000;
+	color: #FFCC33;
 }
 ul li.active a{
 	background-color: #fff;
@@ -52,41 +54,119 @@ ul li.active a{
 	padding: 17px 30px;
 }
 
-.logo h1{
-	color: white;
-	
- }
-.tittle {
-	position: absolute;
-	top: 40%;
-	left: 35%;
-	transform:  translate(-50%,-50%);
+.text h1{
+	color: black;
+	text-align: center;
+
+}
+.text p{
+	color: black;
+	text-align: center;
+
 }
 
-.tittle h2{
-	color: white;
-	font-size: 60px;
- }
-
- .p h1{
- 	margin: 0 auto;
- 	width: 50%; 
- 	height: 50%;
- }
 
 
-.imgcon
-   {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/about.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-attachment: fixed; 
-    background-size: 100% 100%;
- }
-.carousel {
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+section
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	transform-style: preserve-3d;
 	width: 1100px;
-	height: 500px;
-	
 }
+section .card
+{
+	position: relative;
+	width: 320px;
+	height: 320px;
+	margin: 20px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
 }
+section .card .box
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: 1s ease;
+}
+section .card:hover .box
+{
+	transform:rotateY(180deg);
+}
+section .card .box .imgBx
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+section .card .box .imgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+section .card .box .contentBx
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
+
+section .card .box .contentBx div
+{
+	transform-style: preserve-3d;
+	padding: 20px;
+	background: linear-gradient(45deg, #fe0061, #ffeb3b);
+	padding: 20px;
+	transform: translateZ(100px);
+}
+section .card .box .contentBx div h2
+{
+	color: #FBFCFF;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+section .card .box .contentBx div p
+{
+	color: #FBFCFF;
+	font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
 
